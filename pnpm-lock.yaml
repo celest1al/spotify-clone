@@ -8,6 +8,7 @@ specifiers:
   postcss: ^8.4.4
   react: ^17.0.2
   react-dom: ^17.0.2
+  recoil: ^0.5.2
   spotify-web-api-node: ^5.0.2
   tailwind-scrollbar-hide: ^1.1.7
   tailwindcss: ^3.0.0
@@ -18,6 +19,7 @@ dependencies:
   next-auth: 4.0.5_react-dom@17.0.2+react@17.0.2
   react: 17.0.2
   react-dom: 17.0.2_react@17.0.2
+  recoil: 0.5.2_react-dom@17.0.2+react@17.0.2
   spotify-web-api-node: 5.0.2
   tailwind-scrollbar-hide: 1.1.7
 
@@ -1070,6 +1072,10 @@ packages:
     resolution: {integrity: sha512-qkIilPUYcNhJpd33n0GBXTB1MMPp14TxEsEs0pTrsSVucApsYzW5V+Q8Qxhik6KU3evy+qkAAowTByymK0avdg==}
     dev: false
 
+  /hamt_plus/1.0.2:
+    resolution: {integrity: sha1-4hwlKWjH4zsg9qGwlM2FeHomVgE=}
+    dev: false
+
   /has-bigints/1.0.1:
     resolution: {integrity: sha512-LSBS2LjbNBTf6287JEbEzvJgftkF5qFkmCo9hDRpAzKhUOlJ+hx8dd4USs00SgsUNwc4617J9ki5YtEClM2ffA==}
     dev: false
@@ -2021,6 +2027,23 @@ packages:
     dependencies:
       picomatch: 2.3.0
     dev: true
+
+  /recoil/0.5.2_react-dom@17.0.2+react@17.0.2:
+    resolution: {integrity: sha512-Edibzpu3dbUMLy6QRg73WL8dvMl9Xqhp+kU+f2sJtXxsaXvAlxU/GcnDE8HXPkprXrhHF2e6SZozptNvjNF5fw==}
+    peerDependencies:
+      react: '>=16.13.1'
+      react-dom: '*'
+      react-native: '*'
+    peerDependenciesMeta:
+      react-dom:
+        optional: true
+      react-native:
+        optional: true
+    dependencies:
+      hamt_plus: 1.0.2
+      react: 17.0.2
+      react-dom: 17.0.2_react@17.0.2
+    dev: false
 
   /regenerator-runtime/0.13.4:
     resolution: {integrity: sha512-plpwicqEzfEyTQohIKktWigcLzmNStMGwbOUbykx51/29Z3JOGYldaaNGK7ngNXV+UcoqvIMmloZ48Sr74sd+g==}

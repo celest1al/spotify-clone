@@ -10,7 +10,7 @@ export async function middleware(req) {
   // allow the request if the following conditions are met
   // 1. it's a request for next-auth session & provider fetching
   // 2. token exits
-  if (pathname.includes("/api/auth") || token) {
+  if (pathname.includes("/api/auth") || pathname.includes("/icons") || token) {
     return NextResponse.next();
   }
 
