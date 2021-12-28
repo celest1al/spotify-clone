@@ -5,12 +5,12 @@ function Login({ providers }) {
     <div className="flex flex-col items-center justify-center bg-black min-h-screen w-full">
       <img className="w-52 mb-5" src="/icons/spotify-logo.png" alt="spotify" />
       {Object.values(providers).map((provider) => (
-        <div key={provider.id}>
+        <div key={provider?.id}>
           <button
-            onClick={() => signIn(provider.id, { callbackUrl: "/" })}
+            onClick={() => signIn(provider?.id, { callbackUrl: "/" })}
             className="bg-[#18D860] text-white p-5 rounded-lg"
           >
-            Login with {provider.name}
+            Login with {provider?.name}
           </button>
         </div>
       ))}
@@ -18,7 +18,7 @@ function Login({ providers }) {
   );
 }
 
-export const getServerSideProps = async (ctx) => {
+export const getServerSideProps = async () => {
   const providers = await getProviders();
 
   return {
