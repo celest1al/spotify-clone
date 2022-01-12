@@ -28,7 +28,7 @@ function Sidebar() {
   }, [session, spotifyApi])
 
   return (
-    <div className="text-gray-500 p-5 text-sm border-r border-gray-900 overflow-y-auto h-screen scrollbar-hide">
+    <div className="text-gray-500 p-5 text-xs border-r border-gray-900 overflow-y-auto h-screen scrollbar-hide lg:text-sm sm:max-w-[12rem] lg:max-w-[15rem] hidden md:inline-block">
       <div className="space-y-4">
         <button
           className="flex items-center space-x-2 hover:text-white"

@@ -6,6 +6,8 @@ import { useRecoilValue, useRecoilState } from 'recoil'
 import { useSpotify } from '../../hooks/spotify'
 import { playlistIdState, playlistState } from '../../atoms/playlistAtom'
 
+import Songs from 'components/Songs'
+
 const colors = [
   'from-indigo-500',
   'from-purple-500',
@@ -45,9 +47,9 @@ const Center = () => {
   }, [spotifyApi, playlistId, setPlaylist])
 
   return (
-    <div className="flex-grow">
+    <div className="flex-grow h-screen overflow-y-scroll scrollbar-hide">
       <header className="absolute top-5 right-8">
-        <div className="flex items-center bg-black space-x-3 opacity-90 hover:opacity-80 cursor-pointer rounded-full p-1 pr-2">
+        <div className="flex items-center bg-black space-x-3 opacity-90 hover:opacity-80 cursor-pointer rounded-full p-1 pr-2 text-white">
           <img
             className="rounded-full w-10"
             src={session?.user?.image}
@@ -72,6 +74,9 @@ const Center = () => {
           </h1>
         </div>
       </section>
+      <div>
+        <Songs />
+      </div>
     </div>
   )
 }
